@@ -1,0 +1,21 @@
+{
+    // ========== Apparence générale ==========
+    "workbench.colorTheme": "Default Dark+", // Thème VS Code
+    "editor.fontSize": 14, // Taille de police
+    "editor.lineHeight": 22,
+    // ========== Error Lens ==========
+    "errorLens.enabled": true, // Active Error Lens
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info",
+        "hint"
+    ],
+    "errorLens.messageEnabled": true, // Affiche le message d'erreur dans le code
+    // ========== Formatage ==========
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "files.trimTrailingWhitespace": true,
+    // ========== Divers ==========
+    "files.autoSave": "afterDelay"
+}
