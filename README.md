@@ -14,7 +14,7 @@ Ce projet ne fonctionne pas complètement pour le moment.
 
 ## Structure du projet
 
-Tout le code se trouve dans un seul fichier : **`test1.c`**.  
+Tout le code se trouve dans un seul fichier : **`test2.c`**.  
 Ce fichier contient l’ensemble du programme.
 
 ## Compilation
@@ -22,7 +22,7 @@ Ce fichier contient l’ensemble du programme.
 Pour compiler le projet, utilisez simplement la commande suivante :
 
 ```bash
-gcc test1.c -o test2
+gcc test2.c -o test3
 
 
 
