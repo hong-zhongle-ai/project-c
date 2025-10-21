@@ -206,46 +206,46 @@ void free_shape_list(List **head) {
 /** 
 * print ellipse
 * @param svg le fichier svg
-* @param e les parametre de l'ellipse 
+* @param ellipse les parametre de l'ellipse 
 * @param color defini la couleur
 */
 
-void print_ellipse_svg(FILE *svg, ellipse_t *e, const char *color) {
+void print_ellipse_svg(FILE *svg, ellipse_t *ellipse, const char *color) {
     fprintf(svg, " <ellipse cx=\"%d\" cy=\"%d\" rx=\"%d\" ry=\"%d\" fill=\"%s\" />\n",
-            e->cx, e->cy, e->rx, e->ry, color);
+            ellipse->cx, ellipse->cy, ellipse->rx, ellipse->ry, color);
 }
 
 /** 
 * print rectangle
 * @param svg le fichier svg
-* @param e les parametre du rectangle
+* @param rectangle les parametre du rectangle
 * @param color defini la couleur
 */
-void print_rectangle_svg(FILE *svg, rectangle_t *r, const char *color) {
+void print_rectangle_svg(FILE *svg, rectangle_t *rectangle, const char *color) {
     fprintf(svg, " <rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" fill=\"%s\"  />\n",
-            r->x, r->y, r->width, r->height, color);
+            rectangle->x, rectangle->y, rectangle->width, rectangle->height, color);
 }
 
 /** 
 * print carre
 * @param svg le fichier svg
-* @param e les parametre du carre
+* @param carres les parametre du carre
 * @param color defini la couleur
 */
-void print_carres_svg(FILE *svg, carres_t *c, const char *color) {
+void print_carres_svg(FILE *svg, carres_t *carres, const char *color) {
     fprintf(svg, " <rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" fill=\"%s\" />\n",
-            c->x, c->y, c->side, c->side, color);
+            carres->x, c->y, carres->side, carres->side, color);
 }
 
 /** 
 * print cercle
 * @param svg le fichier svg
-* @param e les parametre du cercle
+* @param cercle les parametre du cercle
 * @param color defini la couleur
 */
-void print_cercle_svg(FILE *svg, cercle_t *c, const char *color) {
+void print_cercle_svg(FILE *svg, cercle_t *cercle, const char *color) {
     fprintf(svg, " <circle cx=\"%d\" cy=\"%d\" r=\"%d\" fill=\"%s\" />\n",
-            c->x, c->y, c->r, color);
+            cercle->x, cercle->y, cercle->r, color);
 }
 
 /** 
@@ -254,13 +254,12 @@ void print_cercle_svg(FILE *svg, cercle_t *c, const char *color) {
 * @param e les parametre de la ligne
 * @param color defini la couleur de la ligne
 */
-void print_line_svg(FILE *svg, line_t *l, const char *color) {
+void print_line_svg(FILE *svg, line_t *line, const char *color) {
     fprintf(svg, " <line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" stroke=\"%s\" stroke-width=\"3\" />\n",
-            l->x1, l->y1, l->x2, l->y2, color);
+            line->x1, line->y1, line->x2, line->y2, color);
 }
 /** 
-* print rectangle
-* @param filename le nom du fichier svg
+* @param filename indique ou les parametre du svg seront marque
 * @param head les forme stocker dans le liste
 */
 void export_shapes_to_svg(const char *filename, List *head) {
